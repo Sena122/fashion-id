@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login Page - Fashion.id</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/583bb6c3-d3ab-48ee-8f89-07b7279a3c23.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #1f2937;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.85);
+      max-width: 420px;
+      margin: auto;
+      padding: 2.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    }
+
+    .back-btn {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #1e40af;
+      cursor: pointer;
+    }
+
+    .back-btn svg {
+      margin-right: 0.3rem;
+      fill: #1e40af;
+      height: 1.1rem;
+      width: 1.1rem;
+    }
+
+    a {
+      color: #1e40af;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover, a:focus {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #1e40af;
+      color: #e0e7ff;
+      padding: 2rem 1rem;
+      font-size: 0.875rem;
+    }
+
+    footer a {
+      color: #93c5fd;
+    }
+
+    footer a:hover {
+      color: #bfdbfe;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+
+    .footer-section {
+      flex: 1 1 220px;
+    }
+
+    .footer-title {
+      font-weight: 700;
+      font-size: 1.125rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .social-media input[type="email"] {
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.375rem 0 0 0.375rem;
+      border: none;
+      flex-grow: 1;
+      outline: none;
+    }
+
+    .social-media button {
+      background-color: #fbbf24;
+      color: #1e293b;
+      padding: 0.5rem 1rem;
+      border-radius: 0 0.375rem 0.375rem 0;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border: none;
+    }
+
+    .social-media button:hover,
+    .social-media button:focus {
+      background-color: #f59e0b;
+    }
+
+    .social-media form {
+      display: flex;
+      max-width: 320px;
+    }
+
+    @media (max-width: 640px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .social-media form {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="pt-6 max-w-4xl mx-auto w-full px-4 flex items-center justify-between">
+    <div class="back-btn" role="button" tabindex="0" aria-label="Back to previous page" onclick="history.back();" onkeypress="if(event.key==='Enter') history.back();">
+      <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M12.707 15.707a1 1 0 01-1.414 0L6.586 11l4.707-4.707a1 1 0 111.414 1.414L9.414 11l3.293 3.293a1 1 0 010 1.414z" clip-rule="evenodd"/></svg>
+      Back</div>
+    <div class="font-bold text-xl text-blue-900 select-none">Fashion.id</div>
+    <div aria-hidden="true" style="width:48px;"></div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow flex items-center justify-center px-4 mb-12">
+    <section class="overlay" aria-label="Login form">
+      <h1 class="text-center text-lg font-semibold mb-6">Login</h1>
+      <form id="loginForm" action="#" method="POST" novalidate>
+        <label for="username" class="block mb-1 text-sm font-medium">Username atau Telepon</label>
+        <input type="text" id="username" name="username" autocomplete="username" required class="block w-full rounded-md border border-gray-300 px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-600" />
+        
+        <label for="password" class="block mb-1 text-sm font-medium">Password</label>
+        <input type="password" id="password" name="password" autocomplete="current-password" required class="block w-full rounded-md border border-gray-300 px-3 py-2 mb-6 focus:outline-none focus:ring-2 focus:ring-blue-600" />
+        
+        <button type="submit" class="w-full bg-blue-900 text-white rounded-md py-2 font-semibold hover:bg-blue-800 focus:ring-4 focus:ring-blue-700 focus:outline-none transition-colors" aria-label="Login button">Login</button>
+      </form>
+
+      <div class="text-center mt-3 space-y-1 text-sm">
+        <a href="#" class="inline-block hover:underline">Lupa Password?</a><br />
+        Belum punya akun? <a href="regist.html" class="font-semibold hover:underline">Daftar</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer aria-label="Footer">
+    <div class="footer-container">
+      <section class="footer-section" aria-labelledby="footer-fashionid">
+        <h2 id="footer-fashionid" class="footer-title">Fashion.id</h2>
+        <p class="text-gray-300 leading-relaxed">
+          scachsbcjshcbayscashcvascuhascvaysvciaysvcjacygawucvjawcvj
+        </p>
+        <p class="mt-4 text-sm text-gray-400 select-none">© 2025 || Fashion.id All rights reserved</p>
+      </section>
+
+      <section class="footer-section" aria-labelledby="footer-laman">
+        <h2 id="footer-laman" class="footer-title">Laman</h2>
+        <nav aria-label="Footer navigation">
+          <ul class="space-y-1 text-gray-300">
+            <li><a href="index.html" class="hover:text-white">Home</a></li>
+            <li><a href="#" class="hover:text-white">Informasi</a></li>
+            <li><a href="#" class="hover:text-white">Tentang</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="footer-section" aria-labelledby="footer-socialmedia">
+        <h2 id="footer-socialmedia" class="footer-title">Social Media</h2>
+        <p class="mb-2">Subscribe</p>
+        <form class="social-media" aria-label="Newsletter">
+          <input type="email" name="email" placeholder="Masukkan email" aria-required="true" required />
+          <button type="submit" aria-label="Subscribe">Send</button>
+        </form>
+      </section>
+    </div>
+  </footer>
+  <script>
+    
+  </script>
+</body>
+</html>
