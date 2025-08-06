@@ -8,122 +8,100 @@
 </head>
 <body class="bg-white text-gray-900 font-sans">
     <header class="w-full bg-white shadow-sm fixed top-0 left-0 z-30">
-    <div class="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
-      <a href="#" class="text-indigo-900 font-bold text-xl tracking-widest">FASHION.ID</a>
-      <nav class="hidden md:flex space-x-8 text-gray-700 font-semibold">
-        <a href="#" class="hover:text-indigo-900 transition">Beranda</a>
-        <a href="#" class="hover:text-indigo-900 transition">Tentang</a>
-        <a href="#" class="hover:text-indigo-900 transition">Layanan Produk</a>
-        <a href="#" class="hover:text-indigo-900 transition">Kontak</a>
-      </nav>
-      <div class="flex items-center space-x-3">
-  <form action="#" class="hidden md:flex items-center bg-gray-100 rounded-full px-3 py-1 focus-within:ring-2 focus-within:ring-indigo-900 transition">
-    <input type="search" aria-label="Cari Produk" placeholder="Cari Produk" class="bg-transparent outline-none text-gray-700 placeholder-gray-500 text-sm" />
-    <button type="submit" class="ml-2 text-indigo-900 font-semibold hover:text-indigo-700 transition">Cari</button>
-  </form>
+        <div class="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
+            <a href="index.html" class="text-indigo-900 font-bold text-xl tracking-widest">FASHION.ID</a>
+            <nav class="hidden md:flex space-x-8 text-gray-700 font-semibold">
+                <a href="index.html" class="hover:text-indigo-900 transition">Beranda</a>
+                <a href="tentang.html" class="hover:text-indigo-900 transition">Tentang</a>
+                <a href="produk.html" class="hover:text-indigo-900 transition">Layanan Produk</a>
+                <a href="kontak.html" class="hover:text-indigo-900 transition">Kontak</a>
+            </nav>
+            <div class="flex items-center space-x-3">
+                 <form action="/search" method="GET" class="hidden md:flex items-center bg-gray-100 rounded-full px-3 py-1 focus-within:ring-2 focus-within:ring-indigo-900 transition">
+                    <input type="search" name="q" placeholder="Cari Produk" class="bg-transparent outline-none text-gray-700 placeholder-gray-500 text-sm" />
+                    <button type="submit" class="ml-2 text-indigo-900 font-semibold hover:text-indigo-700 transition">Cari</button>
+                </form>
+                 <a href="login.html" class="hidden md:inline-block bg-indigo-900 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition"> Masuk </a>
+                 <a href="regist.html" class="bg-yellow-400 text-indigo-900 text-sm font-semibold px-4 py-2 rounded shadow-md hover:bg-yellow-300 transition"> Daftar </a>
+                </div>
+    </header>
 
-  <a href="login.html" class="hidden md:inline-block bg-indigo-900 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition">
-    Masuk
-  </a>
-
-  <a href="regist.html" class="bg-yellow-400 text-indigo-900 text-sm font-semibold px-4 py-2 rounded shadow-md hover:bg-yellow-300 transition">
-    Daftar
-  </a>
-</div>
-
-<button id="mobile-menu-btn" class="md:hidden focus:outline-none" aria-label="Mobile Menu Toggle" aria-expanded="false" aria-controls="mobile-menu">
-  <svg class="w-6 h-6 text-indigo-900" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-  </svg>
-</button>
-
-  </header>
-
-  <main class="pt-20 max-w-7xl mx-auto px-5">
-    <!-- Hero Section -->
-    <section class="relative bg-gray-100 rounded-xl overflow-hidden max-w-5xl mx-auto mt-6 shadow-lg">
-      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d32251f7-1bd1-4f7b-a06d-eb79ebeeeb16.png" 
-           alt="Soft-focus image showing a clothing rack with neutral-toned fashion items like shirts and jackets hanging in bright, warm lighting" 
-           class="w-full h-56 md:h-72 lg:h-96 object-cover brightness-75" 
-           onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/36dca598-793c-43d9-915b-5dcd80d5a1bf.png';" />
-      <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6 md:px-12">
-        <h1 class="text-white text-xl sm:text-3xl md:text-4xl font-extrabold max-w-4xl leading-snug">
-          TEMUKAN FASHION ANDA <span class="text-yellow-400">AGAR</span><br />
-          <span class="text-yellow-400">LEBIH MENARIK</span>
-        </h1>
-        <button id="shop-btn" class="mt-6 bg-indigo-900 hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-500 rounded-md px-6 py-3 text-white font-bold text-lg transition-shadow shadow-sm">
-          Mari Kita Belanja
+<main class="mt-20">
+    <section class="bg-gray-100 rounded-xl overflow-hidden max-w-7xl mx-auto mt-6 shadow-lg">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d32251f7-1bd1-4f7b-a06d-eb79ebeeeb16.png" alt="Soft-focus image showing a clothing rack with neutral-toned fashion items like shirts and jackets hanging in bright, warm lighting" class="w-full h-56 md:h-72 lg:h-96 object-cover brightness-75" onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/36dca598-793c-43d9-915b-5dcd80d5a1bf.png';" /> <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6 md:px-12">
+            <h1 class="text-white text-xl sm:text-3xl md:text-4xl font-extrabold max-w-4xl leading-snug"> TEMUKAN FASHION ANDA <span class="text-yellow-400"> AGAR </span><br/> 
+                <span class="text-yellow-400">LEBIH MENARIK</span>
+            </h1>
+            <button id="shop-btn" onclick="window.location.href='produk.html'" class="mt-6 bg-indigo-900 hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-500 rounded-md px-6 py-3 text-white font-bold text-lg transition-shadow shadow-sm"> Mari Kita Belanja </button>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden focus:outline-none" aria-label="Toggle Menu">
+            <svg id="icon-open" class="w-6 h-6 text-indigo-900 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="icon-close" class="w-6 h-6 text-indigo-900 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
         </button>
-      </div>
-      <button id="hero-prev" aria-label="Previous slide" class="absolute top-1/2 left-4 -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-90 rounded-full p-2 text-indigo-900 shadow-md transition">
-        ❮
-      </button>
-      <button id="hero-next" aria-label="Next slide" class="absolute top-1/2 right-4 -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-90 rounded-full p-2 text-indigo-900 shadow-md transition">
-        ❯
-      </button>
+        </div>
     </section>
 
-    <!-- Rekomendasi -->
     <section class="my-12 max-w-5xl mx-auto text-center px-3">
-      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">Rekomendasi Produk <br>Fashion Terkini</h2>
-      <p class="text-gray-600 max-w-xl mx-auto mb-8">Lihat berbagai fashion dengan mudah dan aman bersama Fashion.id.</p>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">Rekomendasi Produk <br>Fashion Terkini</h2>
+        <p class="text-gray-600 max-w-xl mx-auto mb-8">Lihat berbagai fashion dengan mudah dan aman bersama Fashion.id.</p>
 
-      <div class="flex gap-6 overflow-x-auto scrollbar-hide px-2 mt-6">
-  <!-- Rekomendasi Produk 1 -->
-  <div class="flex-shrink-0 w-64 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition">
-    <img src="https://placehold.co/400x250/png?text=Rekomendasi+1" alt="Rekomendasi Produk 1" class="w-full h-40 object-cover rounded-t-lg" />
-    <div class="p-4">
-      <h4 class="font-semibold text-lg">Kemeja Linen Premium</h4>
-      <p class="text-sm text-gray-600 mb-3">Nyaman dipakai sehari-hari, cocok untuk suasana formal maupun santai.</p>
-      <p class="text-indigo-900 font-bold text-md">Rp. 175.000</p>
-    </div>
-  </div>
-
-  <!-- Rekomendasi Produk 2 -->
-  <div class="flex-shrink-0 w-64 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition">
-    <img src="https://placehold.co/400x250/png?text=Rekomendasi+2" alt="Rekomendasi Produk 2" class="w-full h-40 object-cover rounded-t-lg" />
-    <div class="p-4">
-      <h4 class="font-semibold text-lg">Celana Jogger Slim Fit</h4>
-      <p class="text-sm text-gray-600 mb-3">Tetap stylish saat bersantai. Terbuat dari bahan katun premium.</p>
-      <p class="text-indigo-900 font-bold text-md">Rp. 149.000</p>
-    </div>
-  </div>
-
-  <!-- Rekomendasi Produk 3 -->
-  <div class="flex-shrink-0 w-64 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition">
-    <img src="https://placehold.co/400x250/png?text=Rekomendasi+3" alt="Rekomendasi Produk 3" class="w-full h-40 object-cover rounded-t-lg" />
-    <div class="p-4">
-      <h4 class="font-semibold text-lg">Sneakers Kasual Putih</h4>
-      <p class="text-sm text-gray-600 mb-3">Desain minimalis, cocok untuk berbagai outfit.</p>
-      <p class="text-indigo-900 font-bold text-md">Rp. 299.000</p>
-    </div>
-  </div>
-
-  <!-- Rekomendasi Produk 4 -->
-  <div class="flex-shrink-0 w-64 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition">
-    <img src="https://placehold.co/400x250/png?text=Rekomendasi+3" alt="Rekomendasi Produk 3" class="w-full h-40 object-cover rounded-t-lg" />
-    <div class="p-4">
-      <h4 class="font-semibold text-lg">Sneakers Kasual Putih</h4>
-      <p class="text-sm text-gray-600 mb-3">Desain minimalis, cocok untuk berbagai outfit.</p>
-      <p class="text-indigo-900 font-bold text-md">Rp. 299.000</p>
-    </div>
-  </div>
-</div>
-
+        <div class="flex gap-6 overflow-x-auto scrollbar-hide px-2 mt-6">
+            <!-- Rekomendasi Produk 1 -->
+             <div class="flex-shrink-0 w-64 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition">
+                <img src="https://placehold.co/400x250/png?text=Rekomendasi+1" alt="Rekomendasi Produk 1" class="w-full h-40 object-cover rounded-t-lg" />
+                <div class="p-4">
+                    <h4 class="font-semibold text-lg">Kemeja Linen Premium</h4>
+                    <p class="text-sm text-gray-600 mb-3">Nyaman dipakai sehari-hari, cocok untuk suasana formal maupun santai.</p>
+                    <p class="text-indigo-900 font-bold text-md">Rp. 175.000</p>
+                </div>
+            </div>
+            
+            <!-- Rekomendasi Produk 2 -->
+             <div class="flex-shrink-0 w-64 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition">
+                <img src="https://placehold.co/400x250/png?text=Rekomendasi+2" alt="Rekomendasi Produk 2" class="w-full h-40 object-cover rounded-t-lg" />
+                <div class="p-4">
+                    <h4 class="font-semibold text-lg">Celana Jogger Slim Fit</h4>
+                    <p class="text-sm text-gray-600 mb-3">Tetap stylish saat bersantai. Terbuat dari bahan katun premium.</p>
+                    <p class="text-indigo-900 font-bold text-md">Rp. 149.000</p>
+                </div>
+            </div>
+            
+            <!-- Rekomendasi Produk 3 -->
+             <div class="flex-shrink-0 w-64 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition">
+                <img src="https://placehold.co/400x250/png?text=Rekomendasi+3" alt="Rekomendasi Produk 3" class="w-full h-40 object-cover rounded-t-lg" />
+                <div class="p-4">
+                    <h4 class="font-semibold text-lg">Sneakers Kasual Putih</h4>
+                    <p class="text-sm text-gray-600 mb-3">Desain minimalis, cocok untuk berbagai outfit.</p>
+                    <p class="text-indigo-900 font-bold text-md">Rp. 299.000</p>
+                </div>
+            </div>
+            
+            <!-- Rekomendasi Produk 4 -->
+             <div class="flex-shrink-0 w-64 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition">
+                <img src="https://placehold.co/400x250/png?text=Rekomendasi+4" alt="Rekomendasi Produk 4" class="w-full h-40 object-cover rounded-t-lg" />
+                <div class="p-4">
+                    <h4 class="font-semibold text-lg">Jam Tangan Kulit Elegan</h4>
+                    <p class="text-sm text-gray-600 mb-3">Tampil elegan di segala acara dengan jam tangan kulit klasik.</p>
+                    <p class="text-indigo-900 font-bold text-md">Rp. 225.000</p>
+                </div>
+            </div>
+        </div>
   </main>
-    <!-- Section: Produk terbaru -->
-    <section class="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24 py-12">
-        <h2 class="text-center text-2xl sm:text-3xl font-semibold mb-8">Produk terbaru dari kami</h2>
-        <div class="flex gap-6 overflow-x-auto scrollbar-hide px-2">
-            <!-- Card 1 -->
-            <article class="flex-shrink-0 w-72 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
-                <div class="relative">
-                    <img 
-                        src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/895a5166-1d84-40aa-8fe9-4bccf8ba4812.png" 
-                        alt="Interior gallery wood benches and paintings on walls, warm light illuminating art pieces in a cozy gallery space" 
-                        class="rounded-t-lg object-cover w-full h-48"
-                        onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dfec568c-fa2a-4944-baee-23661fa6be57.png';"
-                    />
+  
+  <!-- Section: Produk terbaru -->
+   <section class="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24 py-12">
+    <h2 class="text-center text-2xl sm:text-3xl font-semibold mb-8">Produk terbaru dari kami</h2>
+    
+    <div class="flex gap-6 overflow-x-auto scrollbar-hide px-2">
+        
+        <!-- Card 1 -->
+         <article class="flex-shrink-0 w-72 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
+            <div class="relative">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/895a5166-1d84-40aa-8fe9-4bccf8ba4812.png" alt="Interior gallery wood benches and paintings on walls, warm light illuminating art pieces in a cozy gallery space" class="rounded-t-lg object-cover w-full h-48" onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dfec568c-fa2a-4944-baee-23661fa6be57.png';"/>
                     <button aria-label="Tambahkan Jaket Corduroy ke favorit" class="absolute top-3 right-3 bg-white bg-opacity-80 rounded-full p-1.5 hover:bg-red-100 transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
@@ -148,16 +126,11 @@
                     <p class="text-lg font-semibold">Rp. 235.000</p>
                 </div>
             </article>
-
+            
             <!-- Card 2 -->
             <article class="flex-shrink-0 w-72 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
                 <div class="relative">
-                    <img 
-                        src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b58ffbbc-82b8-44d8-af55-e21a20b5718b.png" 
-                        alt="Interior gallery wood benches and paintings on walls, warm light illuminating art pieces in a cozy gallery space" 
-                        class="rounded-t-lg object-cover w-full h-48"
-                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/png?text=Image+not+available';"
-                    />
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b58ffbbc-82b8-44d8-af55-e21a20b5718b.png" alt="Interior gallery wood benches and paintings on walls, warm light illuminating art pieces in a cozy gallery space" class="rounded-t-lg object-cover w-full h-48" onerror="this.onerror=null; this.src='https://placehold.co/600x400/png?text=Image+not+available';"/>
                     <button aria-label="Tambahkan Underwear Naykilla ke favorit" class="absolute top-3 right-3 bg-white bg-opacity-80 rounded-full p-1.5 hover:bg-red-100 transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
@@ -224,19 +197,15 @@
         <h3 class="text-xl sm:text-2xl font-bold mb-10 max-w-4xl mx-auto">
             Apa tanggapan mereka tentang Fashion.id?
         </h3>
-        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
+
+        <div id="ulasanContainer" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
             <!-- Testimoni 1 -->
             <figure class="bg-white p-6 rounded-lg shadow-md text-left flex flex-col h-full">
                 <blockquote class="text-gray-700 flex-grow">
-                    <p class="mb-4">“.......”</p>
+                    <p class="mb-4">“blablablabla”</p>
                 </blockquote>
                 <figcaption class="flex items-center space-x-4 mt-2">
-                    <img 
-                        src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9833fadd-e0c5-4d45-b822-c71b465cd4c4.png" 
-                        alt="Foto profil" 
-                        class="w-12 h-12 rounded-full object-cover" 
-                        onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6ca7bc49-2618-4f8a-883c-78d323cb829a.png';"
-                    />
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9833fadd-e0c5-4d45-b822-c71b465cd4c4.png" alt="Foto profil" class="w-12 h-12 rounded-full object-cover" onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6ca7bc49-2618-4f8a-883c-78d323cb829a.png';"/>
                     <div>
                         <p class="text-gray-900 font-semibold">Sitampan Sena</p>
                         <p class="text-gray-500 text-sm">Pelangan Setia</p>
@@ -247,17 +216,10 @@
             <!-- Testimoni 2 -->
             <figure class="bg-white p-6 rounded-lg shadow-md text-left flex flex-col h-full">
                 <blockquote class="text-gray-700 flex-grow">
-                    <p class="mb-4">
-                        “.....”
-                    </p>
+                    <p class="mb-4"> “blablablabla” </p>
                 </blockquote>
                 <figcaption class="flex items-center space-x-4 mt-2">
-                    <img 
-                        src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/42a80964-a463-4fa0-816c-0b0689063904.png" 
-                        alt="Foto profil" 
-                        class="w-12 h-12 rounded-full object-cover" 
-                        onerror="this.onerror=null; this.src='https://placehold.co/64x64/png?text=No+Image';"
-                    />
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/42a80964-a463-4fa0-816c-0b0689063904.png" alt="Foto profil" class="w-12 h-12 rounded-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/64x64/png?text=No+Image';"/>
                     <div>
                         <p class="text-gray-900 font-semibold">Ilham CM</p>
                         <p class="text-gray-500 text-sm">Pengguna Fashion.id</p>
@@ -321,9 +283,9 @@
             <nav aria-label="Footer Navigation" class="space-y-3">
                 <h4 class="text-xl font-semibold text-white mb-4">Laman</h4>
                 <ul>
-                    <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Informasi</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Tentang</a></li>
+                    <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                    <li><a href="info.html" class="hover:text-white transition-colors">Informasi</a></li>
+                    <li><a href="about.html" class="hover:text-white transition-colors">Tentang</a></li>
                 </ul>
             </nav>
             <div>
@@ -355,6 +317,5 @@
         </div>
         <p class="text-center text-sm text-gray-500 mt-10 select-none">© 2025 Fashion.id</p>
     </footer>
-    <script src="js/script.js"></script>
 </body>
 </html>
