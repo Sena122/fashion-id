@@ -27,5 +27,5 @@
         `<p class="text-red-500">Gagal memuat produk. Silakan coba lagi nanti.</p>`;
     }
   }
-  
+
   window.addEventListener('DOMContentLoaded', loadProduk);
