@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Keranjang Belanja</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+
+    .product-list {
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .btn-outline {
+      border-width: 1.5px;
+      border-color: #44403c; /* gray-800 */
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .btn-outline:hover {
+      background-color: #44403c;
+      color: white;
+    }
+
+    .number-bubble {
+      @apply absolute top-1 left-1 bg-white border border-gray-200 rounded-full w-6 h-6 flex items-center justify-center font-semibold text-sm text-gray-800 shadow-md;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center p-4 font-sans text-gray-900">
+  <main class="max-w-md w-full bg-white rounded-xl shadow-lg p-6">
+    <section id="summary-header" class="flex justify-between items-center pb-4 border-b cursor-pointer select-none">
+      <h2 class="font-semibold text-sm tracking-wide uppercase">Ringkasan Pesanan</h2>
+      <div class="flex items-center space-x-2">
+        <span class="font-semibold text-sm">Rp8.500.000</span>
+        <svg id="summary-toggle-icon" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-800 transform rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+    </section>
+
+    <section id="products-section" class="pt-4 space-y-6">
+      <div class="product flex space-x-4 relative">
+        <div class="number-bubble select-none z-10">1</div>
+        <div class="w-20 h-20 flex-shrink-0 rounded-md overflow-hidden bg-gray-200 shadow-inner relative">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f6012a91-6aca-45f8-88fa-10bc398c4be1.png" alt="Aliran sungai di lembah dengan pemandangan rafting outdoor berwarna alami" loading="lazy" class="object-cover w-full h-full" onerror="this.style.display='none';"/>
+        </div>
+        <div class="flex flex-col justify-between flex-1">
+          <div class="flex justify-between items-start">
+            <h3 class="font-semibold text-base">Nama Produk</h3>
+            <span class="font-semibold text-sm">Rp2.666.000</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">Rp.2.666.000</p>
+          <p class="text-xs text-gray-600 uppercase mt-0.5">HITAM / S</p>
+        </div>
+      </div>
+
+      <div class="product flex space-x-4 relative">
+        <div class="number-bubble select-none z-10">2</div>
+        <div class="w-20 h-20 flex-shrink-0 rounded-md overflow-hidden bg-gray-200 shadow-inner relative">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/abe1f35b-288c-49f7-aeba-d6f9b3ad9df6.png" alt="Aliran sungai di lembah dengan pemandangan rafting outdoor berwarna alami" loading="lazy" class="object-cover w-full h-full" onerror="this.style.display='none';"/>
+        </div>
+        <div class="flex flex-col justify-between flex-1">
+          <div class="flex justify-between items-start">
+            <h3 class="font-semibold text-base">Nama Produk</h3>
+            <span class="font-semibold text-sm">Rp2.666.000</span>
+          </div>
+          <p class="text-xs text-gray-500 mt-1">Rp.2.666.000</p>
+          <p class="text-xs text-gray-600 uppercase mt-0.5">HITAM / S</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="total-section" class="pt-6 border-t mt-6 cursor-pointer select-none rounded-lg shadow-inner">
+      <button id="total-toggle" class="w-full flex justify-between items-center px-4 py-3 bg-gray-100 rounded-lg font-medium text-gray-700">
+        <span>Total Keseluruhan</span>
+        <svg id="total-toggle-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700 transform rotate-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div id="total-details" class="px-4 pt-4 pb-2 text-sm text-gray-700 hidden">
+        <div class="flex justify-between border-b border-gray-200 py-1">
+          <span>Jumlah barang</span>
+          <span>Rp8.000.000</span>
+        </div>
+        <div class="flex justify-between border-b border-gray-200 py-1">
+          <span>Biaya Pajak</span>
+          <span>Rp250.000</span>
+        </div>
+        <div class="flex justify-between py-1">
+          <span>Ongkos kirim</span>
+          <span>Rp250.000</span>
+        </div>
+        <div class="flex justify-between border-t border-gray-900 font-semibold pt-2 mt-2">
+          <span>Total Pembayaran</span>
+          <span>Rp8.500.000</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-6 text-center text-sm text-gray-700 font-medium">
+      <p class="mb-4">Pemesanan barang bisa melalui :</p>
+      <div class="grid grid-cols-2 gap-4 px-2">
+        <button type="button" class="btn-outline bg-white rounded-lg py-3 flex items-center justify-center gap-2 hover:bg-gray-800 hover:text-white transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 3h18v13H3z"></path>
+            <path d="M3 16l3 5h12l3-5"></path>
+            <path d="M5 16v-6a7 7 0 0 1 14 0v6"></path>
+          </svg>
+          Diantar
+        </button>
+        <button type="button" class="btn-outline bg-white rounded-lg py-3 flex items-center justify-center gap-2 hover:bg-gray-800 hover:text-white transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 3h18v4H3z"></path>
+            <circle cx="12" cy="17" r="4"></circle>
+            <path d="M9 17v-5h6v5"></path>
+          </svg>
+          Ambil
+        </button>
+      </div>
+    </section>
+
+    <section class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md mt-10">
+  <!-- Form Alamat Pengiriman -->
+  <h2 class="text-lg font-semibold mb-4">Alamat Pengiriman</h2>
+  
+  <form class="space-y-4">
+    <!-- Negara -->
+    <div>
+      <label class="block text-sm font-medium mb-1">Negara/Region</label>
+      <select class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-400">
+        <option>Indonesia</option>
+      </select>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-sm font-medium mb-1">Nama Depan</label>
+        <input type="text" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-400">
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1">Nama Belakang</label>
+        <input type="text" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-400">
+      </div>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium mb-1">Perusahaan (Opsional)</label>
+      <input type="text" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-400">
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium mb-1">Alamat</label>
+      <input type="text" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-400">
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium mb-1">Kecamatan</label>
+      <input type="text" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-400">
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium mb-1">Kota/Kabupaten</label>
+      <input type="text" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-400">
+    </div>
+
+    <!-- Provinsi -->
+    <div>
+      <label class="block text-sm font-medium mb-1">Provinsi</label>
+      <select class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-400">
+        <option>Banten</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium mb-1">Kode Pos</label>
+      <input type="text" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-400">
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium mb-1">Nomor Telepon</label>
+      <input type="text" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring focus:border-blue-400">
+    </div>
+
+    <p class="text-gray-500 text-sm italic">Pemesanan akan diatur langsung oleh adminnya</p>
+  </form>
+
+  <!-- Metode Pembayaran -->
+  <div class="mt-8">
+    <h2 class="text-lg font-semibold mb-4">Metode Pembayaran</h2>
+    <p class="text-xs text-gray-500 mb-2">Semua transaksi aman dan terenkripsi</p>
+    <div class="border rounded-lg p-4">
+      <p class="text-sm font-medium mb-3">Pembayaran Melalui Xendit</p>
+      <div class="grid grid-cols-5 gap-3 items-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" class="h-6 mx-auto">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/MasterCard_Logo.svg" class="h-6 mx-auto">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mandiri_logo.svg" class="h-6 mx-auto">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Logo_BNI.svg" class="h-6 mx-auto">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Bank_BSI_logo.svg" class="h-6 mx-auto">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/BCA_logo.svg" class="h-6 mx-auto">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/BRI_2020.svg" class="h-6 mx-auto">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Paypal_2014_logo.svg" class="h-6 mx-auto">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Logo_ovo_purple.svg" class="h-6 mx-auto">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Logo_gopay.svg" class="h-6 mx-auto">
+      </div>
+    </div>
+  </div>
+
+  <!-- Ringkasan Pesanan -->
+  <div class="mt-8 space-y-2 text-sm">
+    <div class="flex justify-between">
+      <span>Jumlah Barang</span>
+      <span>Rp 2.000.000</span>
+    </div>
+    <div class="flex justify-between">
+      <span>Biaya Pajak</span>
+      <span>Rp 250.000</span>
+    </div>
+    <div class="flex justify-between">
+      <span>Ongkos Kirim</span>
+      <span>Rp 250.000</span>
+    </div>
+    <div class="border-t pt-2 flex justify-between font-semibold text-lg">
+      <span>Total Pembayaran</span>
+      <span class="text-black">Rp 8.500.000</span>
+    </div>
+  </div>
+
+<a href="payment.html" class="block w-full bg-blue-400 hover:bg-blue-500 text-white py-3 rounded-lg mt-4 font-medium text-center">
+  Bayar Sekarang
+</a>
+
+
+  </main>
+
+  <script>
+    // Toggle summary arrow and functionality (For extensibility)
+    const summaryHeader = document.getElementById('summary-header');
+    const summaryToggleIcon = document.getElementById('summary-toggle-icon');
+    const productsSection = document.getElementById('products-section');
+    let summaryOpen = true;
+    summaryHeader.addEventListener('click', () => {
+      summaryOpen = !summaryOpen;
+      productsSection.style.display = summaryOpen ? 'block' : 'none';
+      summaryToggleIcon.classList.toggle('rotate-180', summaryOpen);
+    });
+
+    // Toggle total details open/close
+    const totalToggle = document.getElementById('total-toggle');
+    const totalDetails = document.getElementById('total-details');
+    const totalToggleIcon = document.getElementById('total-toggle-icon');
+    let totalOpen = false;
+    totalToggle.addEventListener('click', () => {
+      totalOpen = !totalOpen;
+      totalDetails.classList.toggle('hidden', !totalOpen);
+      totalToggleIcon.classList.toggle('rotate-180', totalOpen);
+    });
+
+  </script>
+</body>
+</html>
+

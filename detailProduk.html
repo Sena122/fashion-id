@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fashion.ID Product Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body class="bg-white min-h-screen font-sans text-gray-900">
+    <header
+      class="w-full bg-white/30 backdrop-blur-md shadow-sm fixed top-0 left-0 z-30"
+    >
+      <div
+        class="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between"
+      >
+        <a
+          href="index.html"
+          class="text-indigo-900 font-bold text-xl tracking-widest"
+          >FASHION.ID</a
+        >
+        <nav class="hidden md:flex space-x-8 text-gray-700 font-semibold">
+          <a href="index.html" class="hover:text-indigo-900 transition"
+            >Beranda</a
+          >
+          <a href="tentang.html" class="hover:text-indigo-900 transition"
+            >Tentang</a
+          >
+          <a href="layananProduk.html" class="hover:text-indigo-900 transition"
+            >Layanan Produk</a
+          >
+          <a href="kontak.html" class="hover:text-indigo-900 transition"
+            >Kontak</a
+          >
+        </nav>
+
+        <!-- Desktop Search + Auth -->
+        <div class="hidden md:flex items-center space-x-3">
+          <form
+            action="/search"
+            method="GET"
+            class="items-center bg-gray-100 rounded-full px-3 py-1 focus-within:ring-2 focus-within:ring-indigo-900 transition"
+          >
+            <input
+              type="search"
+              name="q"
+              placeholder="Cari Produk"
+              class="bg-transparent outline-none text-gray-700 placeholder-gray-500 text-sm"
+            />
+            <button
+              type="submit"
+              class="ml-2 text-indigo-900 font-semibold hover:text-indigo-700 transition"
+            >
+              Cari
+            </button>
+          </form>
+          <a
+            href="login.html"
+            class="bg-indigo-900 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition"
+            >Masuk</a
+          >
+          <a
+            href="regist.html"
+            class="bg-yellow-400 text-indigo-900 text-sm font-semibold px-4 py-2 rounded shadow-md hover:bg-yellow-300 transition"
+            >Daftar</a
+          >
+        </div>
+
+        <button
+          id="menuToggle"
+          class="md:hidden text-indigo-900 focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div
+        id="mobileMenu"
+        class="md:hidden hidden flex flex-col px-5 pb-4 space-y-3 text-sm font-semibold bg-white shadow-inner"
+      >
+        <a href="index.html" class="text-gray-700 hover:text-indigo-900"
+          >Beranda</a
+        >
+        <a href="tentang.html" class="text-gray-700 hover:text-indigo-900"
+          >Tentang</a
+        >
+        <a href="layananProduk.html" class="text-gray-700 hover:text-indigo-900"
+          >Layanan Produk</a
+        >
+        <a href="kontak.html" class="text-gray-700 hover:text-indigo-900"
+          >Kontak</a
+        >
+        <form
+          action="/search"
+          method="GET"
+          class="flex items-center bg-gray-100 rounded-full px-3 py-2"
+        >
+          <input
+            type="search"
+            name="q"
+            placeholder="Cari Produk"
+            class="bg-transparent outline-none text-gray-700 placeholder-gray-500 text-sm w-full"
+          />
+          <button
+            type="submit"
+            class="ml-2 text-indigo-900 font-semibold hover:text-indigo-700 transition"
+          >
+            Cari
+          </button>
+        </form>
+        <div class="flex gap-2 pt-2">
+          <a
+            href="login.html"
+            class="w-full text-center bg-indigo-900 text-white px-4 py-2 rounded hover:bg-indigo-700"
+            >Masuk</a
+          >
+          <a
+            href="regist.html"
+            class="w-full text-center bg-yellow-400 text-indigo-900 px-4 py-2 rounded shadow-md hover:bg-yellow-300"
+            >Daftar</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-md mx-auto p-4">
+      <h1 class="mt-6 mb-4 text-xl font-bold text-gray-900 text-center">
+        Nama Produk
+      </h1>
+
+      <!-- Bagian gambar dan thumbnail -->
+      <div class="flex flex-row lg:flex-col gap-4">
+        <div class="w-3/4">
+          <img
+            id="main-image"
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/30ed2bc7-d5cf-4e4f-ba64-a401e3265a0d.png"
+            alt="Gambar utama"
+            class="w-full rounded-md border border-gray-300 object-cover select-none"
+            onerror="this.onerror=null;this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/805dbd2e-7d1b-4a01-a1fc-34ac67c7f17c.png';"
+          />
+          <button
+            id="lihatBtn"
+            class="w-full mt-2 py-2 bg-indigo-900 text-white rounded-md font-semibold hover:bg-indigo-800 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-600"
+            type="button"
+          >
+            Lihat
+          </button>
+        </div>
+
+        <div class="flex flex-col gap-2 w-1/4 overflow-y-auto max-h-[400px]">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b1c8778b-9029-47ed-acf3-66791ada34b8.png"
+            alt="Thumbnail 1"
+            class="rounded-md border border-gray-300 object-cover cursor-pointer select-none"
+          />
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f547f677-98ab-489c-add2-879fef1b8b80.png"
+            alt="Thumbnail 2"
+            class="rounded-md border border-gray-300 object-cover cursor-pointer select-none"
+          />
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fd0cfc0d-d443-4c2c-9ff4-8c323c542de9.png"
+            alt="Thumbnail 3"
+            class="rounded-md border border-gray-300 object-cover cursor-pointer select-none"
+          />
+        </div>
+      </div>
+
+      <!-- Form Pemesanan -->
+      <form id="order-form" class="mt-6 space-y-4" onsubmit="return false;">
+        <div class="flex justify-between items-center flex-wrap gap-2">
+          <div>
+            <p class="font-semibold mb-1">Pilih Ukuran</p>
+            <div class="flex gap-2 flex-wrap">
+              <label class="cursor-pointer">
+                <input type="radio" name="size" value="S" class="hidden peer" />
+                <div
+                  class="px-3 py-1 border border-gray-400 rounded shadow-sm peer-checked:bg-indigo-600 peer-checked:text-white select-none"
+                >
+                  S
+                </div>
+              </label>
+              <label class="cursor-pointer">
+                <input type="radio" name="size" value="M" class="hidden peer" />
+                <div
+                  class="px-3 py-1 border border-gray-400 rounded shadow-sm peer-checked:bg-indigo-600 peer-checked:text-white select-none"
+                >
+                  M
+                </div>
+              </label>
+              <label class="cursor-pointer">
+                <input type="radio" name="size" value="L" class="hidden peer" />
+                <div
+                  class="px-3 py-1 border border-gray-400 rounded shadow-sm peer-checked:bg-indigo-600 peer-checked:text-white select-none"
+                >
+                  L
+                </div>
+              </label>
+              <label class="cursor-pointer">
+                <input
+                  type="radio"
+                  name="size"
+                  value="XL"
+                  class="hidden peer"
+                />
+                <div
+                  class="px-3 py-1 border border-gray-400 rounded shadow-sm peer-checked:bg-indigo-600 peer-checked:text-white select-none"
+                >
+                  XL
+                </div>
+              </label>
+              <label class="cursor-pointer">
+                <input
+                  type="radio"
+                  name="size"
+                  value="XXL"
+                  class="hidden peer"
+                />
+                <div
+                  class="px-3 py-1 border border-gray-400 rounded shadow-sm peer-checked:bg-indigo-600 peer-checked:text-white select-none"
+                >
+                  XXL
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="text-sm font-semibold text-gray-700 select-none">
+            Jumlah Stok : <span id="stock-count">12</span>
+          </div>
+        </div>
+
+        <div>
+          <label for="color-select" class="font-semibold mb-1 block select-none"
+            >Pilih Warna</label
+          >
+          <select
+            id="color-select"
+            class="w-full border border-gray-400 rounded p-2 appearance-none cursor-pointer"
+          >
+            <option value="merah">Merah</option>
+            <option value="biru">Biru</option>
+            <option value="hitam">Hitam</option>
+            <option value="putih">Putih</option>
+            <option value="abu">Abu-abu</option>
+          </select>
+        </div>
+
+        <div class="flex items-center gap-4 justify-between">
+          <div
+            class="flex items-center border border-gray-400 rounded overflow-hidden select-none"
+            style="width: 120px"
+          >
+            <button
+              type="button"
+              id="qty-minus"
+              class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold w-8 h-8 leading-8 text-center focus:outline-none"
+            >
+              -
+            </button>
+            <input
+              type="number"
+              id="qty-input"
+              value="12"
+              min="1"
+              max="12"
+              readonly
+              class="w-full text-center bg-white focus:outline-none"
+            />
+            <button
+              type="button"
+              id="qty-plus"
+              class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold w-8 h-8 leading-8 text-center focus:outline-none"
+            >
+              +
+            </button>
+          </div>
+          <div class="flex-1 text-right font-semibold text-gray-900">
+            Total : <span id="total-price">Rp.718.000</span>
+          </div>
+        </div>
+
+        <button
+          id="order-btn"
+          type="submit"
+          class="w-full py-3 bg-gray-100 hover:bg-gray-200 text-gray-900 font-semibold rounded shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        >
+          BUATKAN PESANAN
+        </button>
+      </form>
+
+      <section class="mt-6 font-sans">
+        <h2 class="text-lg font-bold mb-3">Deskripsi barang</h2>
+
+        <!-- Paragraf dengan border bawah biru -->
+        <p
+          class="text-sm text-blue-600 leading-relaxed border-b border-blue-500 pb-1 mb-4"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+          ipsum dolor sit <span class="font-semibold">amet</span> consectetur
+          adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </p>
+
+        <!-- Paragraf normal -->
+        <p class="text-sm leading-relaxed mb-4">
+          Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing
+          elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+
+        <!-- Tabel ukuran -->
+        <div class="overflow-x-auto mt-4">
+          <table class="w-full border border-gray-300 text-sm text-center">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="border border-gray-300 p-2">Ukuran</th>
+                <th class="border border-gray-300 p-2">XS</th>
+                <th class="border border-gray-300 p-2">S</th>
+                <th class="border border-gray-300 p-2">M</th>
+                <th class="border border-gray-300 p-2">L</th>
+                <th class="border border-gray-300 p-2">XL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-gray-300 p-2">Lingkar dada</td>
+                <td class="border border-gray-300 p-2">74 - 78</td>
+                <td class="border border-gray-300 p-2">82 - 86</td>
+                <td class="border border-gray-300 p-2">90 - 94</td>
+                <td class="border border-gray-300 p-2">98 - 102</td>
+                <td class="border border-gray-300 p-2">107 - 113</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 p-2">Lingkar pinggang</td>
+                <td class="border border-gray-300 p-2">62 - 66</td>
+                <td class="border border-gray-300 p-2">70 - 74</td>
+                <td class="border border-gray-300 p-2">78 - 82</td>
+                <td class="border border-gray-300 p-2">86 - 91</td>
+                <td class="border border-gray-300 p-2">96 - 97</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 p-2">Lingkar pinggul</td>
+                <td class="border border-gray-300 p-2">82 - 86</td>
+                <td class="border border-gray-300 p-2">90 - 94</td>
+                <td class="border border-gray-300 p-2">98 - 102</td>
+                <td class="border border-gray-300 p-2">106 - 110</td>
+                <td class="border border-gray-300 p-2">115 - 120</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 py-12 px-6 sm:px-12 lg:px-24">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div>
+          <h4 class="text-xl font-semibold text-white mb-4">Fashion id</h4>
+          <p class="text-sm leading-relaxed">
+            Fashion.ID adalah platform fashion modern yang menghadirkan tren
+            terbaru dengan gaya elegan dan harga terjangkau. Temukan koleksi
+            terbaik untuk tampil percaya diri setiap hari.
+          </p>
+        </div>
+        <nav aria-label="Footer Navigation" class="space-y-3">
+          <h4 class="text-xl font-semibold text-white mb-4">Laman</h4>
+          <ul>
+            <li>
+              <a href="index.html" class="hover:text-white transition-colors"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="info.html" class="hover:text-white transition-colors"
+                >Informasi</a
+              >
+            </li>
+            <li>
+              <a href="about.html" class="hover:text-white transition-colors"
+                >Tentang</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <h4 class="text-xl font-semibold text-white mb-4">Social Media</h4>
+          <div class="flex space-x-6 mb-6">
+            <a
+              href="#"
+              aria-label="YouTube"
+              class="hover:text-white"
+              title="YouTube Social Media"
+            >
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path d="M10 15l5.19-3L10 9v6z" />
+                <path
+                  d="M21.8 7.5s-.2-1.4-.82-2a3.54 3.54 0 0 0-2.5-1.06C15.17 4 12 4 12 4s-3.17 0-6.5.48a3.54 3.54 0 0 0-2.5 1.06c-.62.6-.82 2-.82 2A29.18 29.18 0 0 0 2 12a29.18 29.18 0 0 0 .18 4.5s.2 1.4.82 2a3.54 3.54 0 0 0 2.5 1.06c3.33.48 6.5.48 6.5.48s3.17 0 6.5-.48a3.54 3.54 0 0 0 2.5-1.06c.62-.6.82-2 .82-2A29.18 29.18 0 0 0 22 12a29.18 29.18 0 0 0-.2-4.5Z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              aria-label="Instagram"
+              class="hover:text-white"
+              title="Instagram Social Media"
+            >
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3zm10.5 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              aria-label="Facebook"
+              class="hover:text-white"
+              title="Facebook Social Media"
+            >
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M22 12a10 10 0 1 0-11.625 9.873v-6.998h-2.303v-2.875h2.303v-2.197c0-2.284 1.366-3.55 3.463-3.55.999 0 2.045.179 2.045.179v2.252h-1.153c-1.137 0-1.492.707-1.492 1.434v1.882h2.53l-.404 2.875h-2.126v6.998A10 10 0 0 0 22 12z"
+                />
+              </svg>
+            </a>
+          </div>
+          <form
+            class="flex gap-2 max-w-sm"
+            onsubmit="event.preventDefault(); alert('Terima kasih telah berlangganan!'); this.reset();"
+          >
+            <input
+              type="email"
+              aria-label="Email untuk langganan newsletter"
+              placeholder="Masukkan email Anda..."
+              required
+              class="flex-grow px-4 py-2 rounded-l-md border border-gray-500 focus:outline-none focus:ring-2 focus:ring-sky-500 text-gray-900"
+            />
+            <button
+              type="submit"
+              class="px-4 py-2 bg-sky-600 text-white rounded-r-md hover:bg-sky-700 transition-colors"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+      <p class="text-center text-sm text-gray-500 mt-10 select-none">
+        © 2025 Fashion.id
+      </p>
+    </footer>
+    <script src="js/detailProduk.js"></script>
+  </body>
+</html>
