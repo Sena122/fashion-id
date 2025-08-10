@@ -33,7 +33,6 @@
           >
         </nav>
 
-        <!-- Desktop Search + Auth -->
         <div class="hidden md:flex items-center space-x-3">
           <form
             action="/search"
@@ -133,54 +132,59 @@
         </div>
       </div>
     </header>
+
     <main class="mt-20">
       <section
-        class="relative bg-gray-100 rounded-xl overflow-hidden max-w-7xl mx-auto mt-6 shadow-lg"
+        class="relative rounded-3xl overflow-hidden max-w-7xl mx-auto mt-8 shadow-2xl"
       >
         <img
-          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d32251f7-1bd1-4f7b-a06d-eb79ebeeeb16.png"
+          src="assets/img/home.jpg"
           alt="Soft-focus image showing a clothing rack"
-          class="w-full h-56 md:h-72 lg:h-96 object-cover brightness-75"
-          onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/36dca598-793c-43d9-915b-5dcd80d5a1bf.png';"
+          class="w-full h-56 md:h-72 lg:h-[30rem] object-cover"
         />
         <div
-          class="absolute inset-0 flex flex-col justify-center items-center text-center px-4 sm:px-6 md:px-12"
+          class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"
+        ></div>
+        <div
+          class="absolute inset-0 flex flex-col justify-center items-center text-center px-6"
         >
           <h1
-            class="text-white text-xl sm:text-3xl md:text-4xl font-extrabold max-w-3xl leading-snug"
+            class="text-white text-2xl sm:text-4xl md:text-5xl font-extrabold leading-snug max-w-3xl drop-shadow-lg"
           >
-            TEMUKAN FASHION ANDA <span class="text-yellow-400">AGAR</span><br />
-            <span class="text-yellow-400">LEBIH MENARIK</span>
+            TEMUKAN <span class="text-yellow-400">FASHION ANDA</span><br />
+            UNTUK <span class="text-yellow-400">TAMPIL MENARIK</span>
           </h1>
           <button
-            id="shop-btn"
             onclick="window.location.href='layananProduk.html'"
-            class="mt-6 bg-indigo-900 hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-500 rounded-md px-6 py-3 text-white font-bold text-base sm:text-lg transition-shadow shadow-sm"
+            class="mt-6 bg-gradient-to-r from-indigo-900 to-indigo-700 hover:from-indigo-800 hover:to-indigo-600 rounded-full px-8 py-3 text-white font-semibold text-lg shadow-lg"
           >
             Mari Kita Belanja
           </button>
         </div>
       </section>
 
-      <!-- Produk Rekomendasi -->
-      <section class="my-12 max-w-5xl mx-auto text-center px-4 sm:px-6">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-2">
-          Rekomendasi Produk <br />Fashion Terkini
+      <!-- REKOMENDASI PRODUK -->
+      <section class="my-16 max-w-6xl mx-auto text-center px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">
+          Rekomendasi Produk
+          <span class="text-indigo-700">Fashion Terkini</span>
         </h2>
-        <p class="text-gray-600 max-w-xl mx-auto mb-8">
-          Lihat berbagai fashion dengan mudah dan aman bersama Fashion.id.
+        <p class="text-gray-600 max-w-xl mx-auto mb-10">
+          Lihat berbagai fashion dengan mudah dan aman bersama
+          <span class="font-semibold">Fashion.id</span>.
         </p>
 
         <div
-          class="flex gap-6 overflow-x-auto scrollbar-hide px-1 -mx-2 sm:mx-0 scroll-smooth scroll-px-6 snap-x snap-mandatory"
+          class="flex gap-6 overflow-x-auto scrollbar-hide px-1 sm:px-0 scroll-smooth snap-x snap-mandatory"
         >
+          <!-- Card Item -->
           <div
-            class="flex-shrink-0 w-64 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition snap-start"
+            class="flex-shrink-0 w-64 bg-white border border-gray-200 rounded-lg shadow hover:shadow-xl transition-all duration-300 snap-start"
           >
             <img
-              src="https://placehold.co/400x250/png?text=Rekomendasi+1"
-              alt="Rekomendasi Produk 1"
-              class="w-full h-40 object-cover rounded-t-lg"
+              src="assets/img/kemejaP.jpg"
+              alt="Kemeja Linen Premium"
+              class="w-full h-44 object-cover rounded-t-lg"
             />
             <div class="p-4 text-left">
               <h4 class="font-semibold text-lg">Kemeja Linen Premium</h4>
@@ -193,12 +197,12 @@
           </div>
 
           <div
-            class="flex-shrink-0 w-64 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition snap-start"
+            class="flex-shrink-0 w-64 bg-white border border-gray-200 rounded-lg shadow hover:shadow-xl transition-all duration-300 snap-start"
           >
             <img
-              src="https://placehold.co/400x250/png?text=Rekomendasi+2"
-              alt=""
-              class="w-full h-40 object-cover rounded-t-lg"
+              src="assets/img/celanaSlim.jpg"
+              alt="Celana Jogger Slim Fit"
+              class="w-full h-44 object-cover rounded-t-lg"
             />
             <div class="p-4 text-left">
               <h4 class="font-semibold text-lg">Celana Jogger Slim Fit</h4>
@@ -210,12 +214,12 @@
           </div>
 
           <div
-            class="flex-shrink-0 w-64 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition snap-start"
+            class="flex-shrink-0 w-64 bg-white border border-gray-200 rounded-lg shadow hover:shadow-xl transition-all duration-300 snap-start"
           >
             <img
-              src="https://placehold.co/400x250/png?text=Rekomendasi+3"
-              alt=""
-              class="w-full h-40 object-cover rounded-t-lg"
+              src="assets/img/Sepatu.jpg"
+              alt="Sneakers Kasual Putih"
+              class="w-full h-44 object-cover rounded-t-lg"
             />
             <div class="p-4 text-left">
               <h4 class="font-semibold text-lg">Sneakers Kasual Putih</h4>
@@ -226,13 +230,14 @@
             </div>
           </div>
 
+          <!-- Card Item -->
           <div
-            class="flex-shrink-0 w-64 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition snap-start"
+            class="flex-shrink-0 w-64 bg-white border border-gray-200 rounded-lg shadow hover:shadow-xl transition-all duration-300 snap-start"
           >
             <img
-              src="https://placehold.co/400x250/png?text=Rekomendasi+4"
-              alt=""
-              class="w-full h-40 object-cover rounded-t-lg"
+              src="assets/img/jam.jpg"
+              alt="Jam Tangan Kulit Elegan"
+              class="w-full h-44 object-cover rounded-t-lg"
             />
             <div class="p-4 text-left">
               <h4 class="font-semibold text-lg">Jam Tangan Kulit Elegan</h4>
@@ -244,334 +249,441 @@
           </div>
         </div>
       </section>
+
+      <section class="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24 py-12">
+        <div class="text-center mb-10">
+          <h2
+            class="text-2xl sm:text-3xl font-bold text-gray-800 relative inline-block"
+          >
+            Produk Terbaru dari Kami
+            <span
+              class="block w-20 h-1 bg-indigo-600 mx-auto mt-3 rounded-full"
+            ></span>
+          </h2>
+          <p class="text-gray-500 mt-3 text-sm sm:text-base">
+            Koleksi fashion terkini dengan desain terbaik untuk melengkapi gaya
+            Anda.
+          </p>
+        </div>
+
+        <div class="flex gap-6 overflow-x-auto scrollbar-hide px-2">
+          <article
+            class="flex-shrink-0 w-72 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition-shadow duration-300"
+          >
+            <div class="relative">
+              <img
+                src="assets/img/JaketH.jpg"
+                alt="Interior gallery wood benches and paintings on walls, warm light illuminating art pieces in a cozy gallery space"
+                class="rounded-t-lg object-cover w-full h-48"
+                onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dfec568c-fa2a-4944-baee-23661fa6be57.png';"
+              />
+              <button
+                aria-label="Tambahkan Jaket Corduroy ke favorit"
+                class="absolute top-3 right-3 bg-white bg-opacity-80 rounded-full p-1.5 hover:bg-red-100 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-red-500"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-lg mb-2">Jaket Corduroy</h3>
+              <p class="text-gray-600 text-sm mb-3 leading-relaxed">
+                Jaket jasmin terbaik untuk melindungi diri. Lapisi dengan jaket
+                corduroy kami untuk tampil keren dan nyaman saat musim dingin.
+              </p>
+              <div class="flex items-center mb-3">
+                <div class="flex text-yellow-400 space-x-0.5">
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
+                    ></path>
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
+                    ></path>
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
+                    ></path>
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
+                    ></path>
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    class="w-4 h-4 text-gray-300"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="ml-2 text-sm font-medium text-gray-700">4.0</span>
+              </div>
+              <p class="text-lg font-semibold">Rp. 235.000</p>
+            </div>
+          </article>
+
+          <article
+            class="flex-shrink-0 w-72 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition-shadow duration-300"
+          >
+            <div class="relative">
+              <img
+                src="assets/img/parka.jpg"
+                alt="Interior gallery wood benches and paintings on walls, warm light illuminating art pieces in a cozy gallery space"
+                class="rounded-t-lg object-cover w-full h-48"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/png?text=Image+not+available';"
+              />
+              <button
+                aria-label="Tambahkan Jaket Parka ke favorit"
+                class="absolute top-3 right-3 bg-white bg-opacity-80 rounded-full p-1.5 hover:bg-red-100 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-red-500"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-lg mb-2">Jaket Parka</h3>
+              <p class="text-gray-600 text-sm mb-3 leading-relaxed">
+                Lengkap Streetwear daily untuk menemani gaya. Jaket dan dengan
+                bahan nyaman, fleksibel agar stylish & fit.
+              </p>
+              <div class="flex items-center mb-3">
+                <div class="flex text-yellow-400 space-x-0.5">
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
+                    ></path>
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
+                    ></path>
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
+                    ></path>
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    class="w-4 h-4 text-gray-300"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
+                    ></path>
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    class="w-4 h-4 text-gray-300"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="ml-2 text-sm font-medium text-gray-700">4.5</span>
+              </div>
+              <p class="text-lg font-semibold">Rp. 250.000</p>
+            </div>
+          </article>
+
+          <article
+            class="flex-shrink-0 w-72 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition-shadow duration-300"
+          >
+            <div class="relative">
+              <img
+                src="assets/img/kaosSound.jpg"
+                alt="Interior gallery wood benches and paintings on walls, warm light illuminating art pieces in a cozy gallery space"
+                class="rounded-t-lg object-cover w-full h-48"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/png?text=Image+not+available';"
+              />
+              <button
+                aria-label="Tambahkan Baju Kaos Sound Horeg ke favorit"
+                class="absolute top-3 right-3 bg-white bg-opacity-80 rounded-full p-1.5 hover:bg-red-100 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-red-500"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-lg mb-2">Kaos Sound Horeg Viral</h3>
+              <p class="text-gray-600 text-sm mb-3 leading-relaxed">
+                Update penampilanmu di era yang makin update, tidak tertinggal
+                jaman sedetikpun
+              </p>
+              <div class="flex items-center mb-3">
+                <div class="flex text-yellow-400 space-x-0.5">
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
+                    ></path>
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
+                    ></path>
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
+                    ></path>
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    class="w-4 h-4 text-gray-300"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
+                    ></path>
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    class="w-4 h-4 text-gray-300"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="ml-2 text-sm font-medium text-gray-700"
+                  >Rp. 30.000</span
+                >
+              </div>
+              <p class="text-lg font-semibold text-gray-900">Rp. 30.000</p>
+            </div>
+          </article>
+          <article
+            class="flex-shrink-0 w-72 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition-shadow duration-300"
+          >
+            <div class="relative">
+              <img
+                src="assets/img/CelanaKargo.jpg"
+                alt="Interior gallery wood benches and paintings on walls, warm light illuminating art pieces in a cozy gallery space"
+                class="rounded-t-lg object-cover w-full h-48"
+                onerror="this.onerror=null; this.src='https://placehold.co/600x400/png?text=Image+not+available';"
+              />
+              <button
+                aria-label="Tambahkan Celana kargo ke favorit"
+                class="absolute top-3 right-3 bg-white bg-opacity-80 rounded-full p-1.5 hover:bg-red-100 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-red-500"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-lg mb-2">Celana Kargo Pria</h3>
+              <p class="text-gray-600 text-sm mb-3 leading-relaxed">
+                Potongan relaxed fit memberikan kenyamanan maksimal saat
+                bergerak, sementara detail jahitan rapi menambah kesan stylish.
+              </p>
+              <div class="flex items-center mb-3">
+                <div class="flex text-yellow-400 space-x-0.5">
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
+                    ></path>
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
+                    ></path>
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    class="w-4 h-4"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
+                    ></path>
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    class="w-4 h-4 text-gray-300"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
+                    ></path>
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    class="w-4 h-4 text-gray-300"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="ml-2 text-sm font-medium text-gray-700"
+                  >Rp. 30.000</span
+                >
+              </div>
+              <p class="text-lg font-semibold text-gray-900">Rp. 330.000</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="bg-sky-50 py-16 px-6 sm:px-12 lg:px-24">
+        <h3 class="text-xl sm:text-2xl font-bold mb-10 text-center">
+          Apa tanggapan mereka tentang
+          <span class="text-sky-600">Fashion.id?</span>
+        </h3>
+
+        <div
+          id="ulasanContainer"
+          class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto"
+        >
+          <figure
+            class="bg-white p-6 rounded-xl shadow-md flex flex-col h-full hover:shadow-lg transition"
+          >
+            <blockquote class="text-gray-700 mb-4 flex-grow">
+              Cool, bisa membantu saya untuk mencari fashion di diri saya
+            </blockquote>
+            <figcaption class="flex items-center space-x-4 mt-4">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9833fadd-e0c5-4d45-b822-c71b465cd4c4.png"
+                alt="Foto profil"
+                class="w-12 h-12 rounded-full object-cover"
+                onerror="this.onerror=null; this.src='https://placehold.co/64x64/png?text=No+Image';"
+              />
+              <div>
+                <p class="text-gray-900 font-semibold">Sitampan Sena</p>
+                <p class="text-gray-500 text-sm">Pelanggan Setia</p>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
     </main>
-
-    <section class="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24 py-12">
-      <h2 class="text-center text-2xl sm:text-3xl font-semibold mb-8">
-        Produk terbaru dari kami
-      </h2>
-
-      <div class="flex gap-6 overflow-x-auto scrollbar-hide px-2">
-        <article
-          class="flex-shrink-0 w-72 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition-shadow duration-300"
-        >
-          <div class="relative">
-            <img
-              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/895a5166-1d84-40aa-8fe9-4bccf8ba4812.png"
-              alt="Interior gallery wood benches and paintings on walls, warm light illuminating art pieces in a cozy gallery space"
-              class="rounded-t-lg object-cover w-full h-48"
-              onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dfec568c-fa2a-4944-baee-23661fa6be57.png';"
-            />
-            <button
-              aria-label="Tambahkan Jaket Corduroy ke favorit"
-              class="absolute top-3 right-3 bg-white bg-opacity-80 rounded-full p-1.5 hover:bg-red-100 transition-colors"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 text-red-500"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z"
-                />
-              </svg>
-            </button>
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold text-lg mb-2">Jaket Corduroy</h3>
-            <p class="text-gray-600 text-sm mb-3 leading-relaxed">
-              Jaket jasmin terbaik untuk melindungi diri. Lapisi dengan jaket
-              corduroy kami untuk tampil keren dan nyaman saat musim dingin.
-            </p>
-            <div class="flex items-center mb-3">
-              <div class="flex text-yellow-400 space-x-0.5">
-                <svg
-                  aria-hidden="true"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  class="w-4 h-4"
-                >
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
-                  ></path>
-                </svg>
-                <svg
-                  aria-hidden="true"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  class="w-4 h-4"
-                >
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
-                  ></path>
-                </svg>
-                <svg
-                  aria-hidden="true"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  class="w-4 h-4"
-                >
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
-                  ></path>
-                </svg>
-                <svg
-                  aria-hidden="true"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  class="w-4 h-4"
-                >
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
-                  ></path>
-                </svg>
-                <svg
-                  aria-hidden="true"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  class="w-4 h-4 text-gray-300"
-                >
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
-                  ></path>
-                </svg>
-              </div>
-              <span class="ml-2 text-sm font-medium text-gray-700">4.0</span>
-            </div>
-            <p class="text-lg font-semibold">Rp. 235.000</p>
-          </div>
-        </article>
-
-        <article
-          class="flex-shrink-0 w-72 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition-shadow duration-300"
-        >
-          <div class="relative">
-            <img
-              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b58ffbbc-82b8-44d8-af55-e21a20b5718b.png"
-              alt="Interior gallery wood benches and paintings on walls, warm light illuminating art pieces in a cozy gallery space"
-              class="rounded-t-lg object-cover w-full h-48"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/png?text=Image+not+available';"
-            />
-            <button
-              aria-label="Tambahkan Underwear Naykilla ke favorit"
-              class="absolute top-3 right-3 bg-white bg-opacity-80 rounded-full p-1.5 hover:bg-red-100 transition-colors"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 text-red-500"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z"
-                />
-              </svg>
-            </button>
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold text-lg mb-2">Underwear Naykilla</h3>
-            <p class="text-gray-600 text-sm mb-3 leading-relaxed">
-              Lengkap Streetwear daily untuk menemani gaya. Jaket dan underwear
-              dengan bahan nyaman, fleksibel agar stylish & fit.
-            </p>
-            <div class="flex items-center mb-3">
-              <div class="flex text-yellow-400 space-x-0.5">
-                <svg
-                  aria-hidden="true"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  class="w-4 h-4"
-                >
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
-                  ></path>
-                </svg>
-                <svg
-                  aria-hidden="true"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  class="w-4 h-4"
-                >
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
-                  ></path>
-                </svg>
-                <svg
-                  aria-hidden="true"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  class="w-4 h-4"
-                >
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
-                  ></path>
-                </svg>
-                <svg
-                  aria-hidden="true"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  class="w-4 h-4 text-gray-300"
-                >
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
-                  ></path>
-                </svg>
-                <svg
-                  aria-hidden="true"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  class="w-4 h-4 text-gray-300"
-                >
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
-                  ></path>
-                </svg>
-              </div>
-              <span class="ml-2 text-sm font-medium text-gray-700">4.5</span>
-            </div>
-            <p class="text-lg font-semibold">Rp. 250.000</p>
-          </div>
-        </article>
-
-        <article
-          class="flex-shrink-0 w-72 bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition-shadow duration-300"
-        >
-          <div class="relative">
-            <img
-              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e4187917-3d3f-4ca6-9c6b-e9f85a00c089.png"
-              alt="Interior gallery wood benches and paintings on walls, warm light illuminating art pieces in a cozy gallery space"
-              class="rounded-t-lg object-cover w-full h-48"
-              onerror="this.onerror=null; this.src='https://placehold.co/600x400/png?text=Image+not+available';"
-            />
-            <button
-              aria-label="Tambahkan Baju Dinas Waria ke favorit"
-              class="absolute top-3 right-3 bg-white bg-opacity-80 rounded-full p-1.5 hover:bg-red-100 transition-colors"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 text-red-500"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z"
-                />
-              </svg>
-            </button>
-          </div>
-          <div class="p-4">
-            <h3 class="font-semibold text-lg mb-2">Baju Dinas Waria</h3>
-            <p class="text-gray-600 text-sm mb-3 leading-relaxed">
-              Layanan terbaik dan stylish untukmu semua. Pastikan agar dikenal
-              dan tampil percaya diri dengan outfit istimewa ini.
-            </p>
-            <div class="flex items-center mb-3">
-              <div class="flex text-yellow-400 space-x-0.5">
-                <svg
-                  aria-hidden="true"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  class="w-4 h-4"
-                >
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
-                  ></path>
-                </svg>
-                <svg
-                  aria-hidden="true"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  class="w-4 h-4"
-                >
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
-                  ></path>
-                </svg>
-                <svg
-                  aria-hidden="true"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  class="w-4 h-4"
-                >
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
-                  ></path>
-                </svg>
-                <svg
-                  aria-hidden="true"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  class="w-4 h-4 text-gray-300"
-                >
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
-                  ></path>
-                </svg>
-                <svg
-                  aria-hidden="true"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  class="w-4 h-4 text-gray-300"
-                >
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.965a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.386 2.462a1 1 0 00-.364 1.118l1.286 3.965c.3.921-.755 1.688-1.54 1.118l-3.386-2.462a1 1 0 00-1.175 0l-3.386 2.462c-.784.57-1.838-.197-1.54-1.118l1.285-3.965a1 1 0 00-.364-1.118L2.045 9.392c-.783-.57-.38-1.81.588-1.81h4.179a1 1 0 00.951-.69l1.286-3.965z"
-                  ></path>
-                </svg>
-              </div>
-              <span class="ml-2 text-sm font-medium text-gray-700"
-                >Rp. 30.000</span
-              >
-            </div>
-            <p class="text-lg font-semibold text-gray-900">Rp. 30.000</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="bg-sky-50 py-16 px-6 sm:px-12 lg:px-24">
-      <h3 class="text-xl sm:text-2xl font-bold mb-10 text-center">
-        Apa tanggapan mereka tentang
-        <span class="text-sky-600">Fashion.id?</span>
-      </h3>
-
-      <div
-        id="ulasanContainer"
-        class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto"
-      >
-        <figure
-          class="bg-white p-6 rounded-xl shadow-md flex flex-col h-full hover:shadow-lg transition"
-        >
-          <blockquote class="text-gray-700 mb-4 flex-grow">
-            Cool, bisa membantu saya untuk mencari fashion di diri saya
-          </blockquote>
-          <figcaption class="flex items-center space-x-4 mt-4">
-            <img
-              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9833fadd-e0c5-4d45-b822-c71b465cd4c4.png"
-              alt="Foto profil"
-              class="w-12 h-12 rounded-full object-cover"
-              onerror="this.onerror=null; this.src='https://placehold.co/64x64/png?text=No+Image';"
-            />
-            <div>
-              <p class="text-gray-900 font-semibold">Sitampan Sena</p>
-              <p class="text-gray-500 text-sm">Pelanggan Setia</p>
-            </div>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
 
     <footer class="bg-gray-900 text-gray-300 py-12 px-6 sm:px-12 lg:px-24">
       <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">

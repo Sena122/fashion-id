@@ -14,7 +14,6 @@
 
   stockCountEl.textContent = maxStock;
 
-  // Update total price based on quantity
   function updateTotalPrice(qty) {
     function formatRupiah(number){
       return 'Rp.' + number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -23,7 +22,6 @@
   }
   updateTotalPrice(parseInt(qtyInput.value, 10));
 
-  // Qty minus button click
   qtyMinusBtn.addEventListener('click', () => {
     let currentQty = parseInt(qtyInput.value, 10);
     if(currentQty > 1) {
@@ -33,7 +31,6 @@
     }
   });
 
-  // Qty plus button click
   qtyPlusBtn.addEventListener('click', () => {
     let currentQty = parseInt(qtyInput.value, 10);
     if(currentQty < maxStock) {
@@ -51,7 +48,6 @@
     });
   });
 
-  // Order button
   orderBtn.addEventListener('click', () => {
     const selectedSize = document.querySelector('input[name="size"]:checked');
     if (!selectedSize) {

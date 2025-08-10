@@ -49,7 +49,7 @@ menuToggle?.addEventListener("click", () => {
   menuToggle.classList.toggle("open");
 });
 
-// Panggil saat DOM siap
+
 document.addEventListener("DOMContentLoaded", () => {
   loadNavbar();
   loadProduk();

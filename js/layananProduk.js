@@ -113,17 +113,17 @@ async function fetchProducts() {
 products = [
   {
     id: 1,
-    name: "River Tubing Adventure",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    name: "Celana Slim Pria",
+    image: "assets/img/CelanaSlim.jpg",
     price: 599000,
     rating: 4.5,
-    sizes: ["S", "M", "L", "XL", "XXL"],
+    sizes: ["S", "M", "L", "XL"],
     liked: false
   },
   {
     id: 2,
-    name: "Cave Exploration Tour",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    name: "Kemeja Pria",
+    image: "assets/img/kemejaP.jpg",
     price: 718000,
     rating: 4.2,
     sizes: ["M", "L", "XL"],
@@ -131,26 +131,25 @@ products = [
   },
   {
     id: 3,
-    name: "Mountain Hiking Trip",
-    image: "https://placehold.co/300x200?text=Hiking",
+    name: "Kaos Sound Horeg Viral",
+    image: "assets/img/KaosSound.jpg",
     price: 820000,
     rating: 4.8,
-    sizes: ["S", "M", "L"],
+    sizes: ["S", "M", "L", "XL"],
     liked: false
   },
   {
     id: 4,
-    name: "Beach Camping Night",
-    image: "https://placehold.co/300x200?text=Camping",
+    name: "Jaket Parka",
+    image: "assets/img/parka.jpg",
     price: 450000,
     rating: 4.0,
     sizes: ["L", "XL"],
     liked: false
-  }
+  },
 ];
 
 filteredProducts = products;
 renderProducts();
-
 
 // fetchProducts();
